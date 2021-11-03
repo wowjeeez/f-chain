@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@reincarnatedjesus/f-chain@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@reincarnatedjesus/f-chain/-/f-chain-1.1.2.tgz#fe6fcba8c832df8c8ba185d42df9737cfc5d7b9c"
-  integrity sha512-xV/wx2iizGiIMqp+dekWQe+fgBOBJ8oNbNrI3DMEc9GeOBOaAGTIGHRIB3BDyL0RkbUAuJOZKxzaa10b/bYMPA==
-
 "@types/node@^16.11.6":
   version "16.11.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.6.tgz#6bef7a2a0ad684cf6e90fcfe31cecabd9ce0a3ae"
