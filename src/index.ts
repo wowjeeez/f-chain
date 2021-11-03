@@ -49,23 +49,3 @@ export function createChainedFunction
         return  createProxiedChain(ch1) as ExcludedChain<Chain>
     }
 }
-
-
-
-const rootFn = (myNum: number) => {
-    return myNum
-}
-
-const chain = {
-    add: (ctx: Context, numToAdd: number) => {
-        const root = ctx.getRoot<number>() //get the return of rootFn
-        ctx.setResult(root + numToAdd) //if nothing is returned from a chain function, then the chain will be returned automatically
-    },
-    subtract: (ctx: Context, numToSub: number) => {
-        const last = ctx.getLast<number>()
-        ctx.setResult(last - numToSub)
-    },
-    getLast: (ctx: Context) => ctx.getLast<number>(),
-    getSub: (ctx: Context) => ctx.get<number>("subtract"), //will return the result of the last called chain.subtract() (if it was called before)
-    getAdd: (ctx: Context) => ctx.get<number>("add") ///will return the result of the last called chain.add() (if it was called before)
-}
