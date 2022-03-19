@@ -1,8 +1,8 @@
-type ArgumentTypes<F extends Function> = F extends (...args: infer A) => any ? A : never;
-type DropFirst<T extends any[]> = ((...args: T) => any) extends (arg: any, ...rest: infer U) => any ? U : T;
-type ChainType = Record<string, (ctx: Context, ...args: any) => any>
+export type ArgumentTypes<F extends Function> = F extends (...args: infer A) => any ? A : never;
+export type DropFirst<T extends any[]> = ((...args: T) => any) extends (arg: any, ...rest: infer U) => any ? U : T;
+export type ChainType = Record<string, (ctx: Context, ...args: any) => any>
 
-type ExcludedChain<Chain extends ChainType> = {
+export type ExcludedChain<Chain extends ChainType> = {
     [P in keyof Chain]: (...args: DropFirst<ArgumentTypes<Chain[P]>>) => ReturnType<Chain[P]> extends void ? ExcludedChain<Chain> : ReturnType<Chain[P]>
 }
 
