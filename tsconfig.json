@@ -7,7 +7,7 @@
     "target": "es2019",
     "outDir": "dist",
     "moduleResolution": "node",
-    "lib": ["es2019"],
+    "lib": ["es2019", "dom"],
     "rootDir": "./src",
     "esModuleInterop": true,
     "declaration": true,

@@ -33,7 +33,10 @@ export function createChainedFunction
                 if (doneCh) {
                     const res = v(contextObj, ...args)
                     context.set("|||___last___||", res || contextObj.get(k))
-                    return res || doneCh
+                    if (res !== undefined && res !== null) {
+                        return res
+                    } 
+                    return doneCh
                 } else {
                     return v(contextObj, ...args)
                 }

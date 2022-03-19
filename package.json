@@ -1,6 +1,6 @@
 {
   "name": "@reincarnatedjesus/f-chain",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "TypeScript function chain lib",
   "main": "dist/index.js",
   "repository": "https://github.com/wowjeeez/f-chain",
